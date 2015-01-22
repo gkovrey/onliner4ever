@@ -1,0 +1,31 @@
+ {
+  "manifest_version": 2,
+  "name": "onlinerЖиви",
+  "version": "1.5.28",
+  "content_scripts": [
+    {
+        "matches": [ 
+            "*://*.onliner.by/*", 
+            "*://kupi.tut.by/*", 
+            "*://*.1k.by/*",
+            "*://*.cheapmunk.by/*",
+            "*://*.redmoose.by/*",
+            "*://*.av.by/*"
+        ],
+        "js": [ 
+                "jquery.min.js",
+                "scripts/core.js", 
+                "scripts/onliner.js", 
+                "scripts/tut.js", 
+                "scripts/1k.js",
+                "scripts/cheapmunk.js",
+                "scripts/redmoose.js",
+                "scripts/av.js",
+                "app.js"
+        ]
+    }
+  ],
+  "icons": {    "16": "icon16.png",
+                "48": "icon48.png",
+                "128": "icon128.png" }
+}
