@@ -5,8 +5,8 @@ var App = function(options) {
 
 App.prototype.init = function(options) {
     this.options = {
-        defaultBukUrl : 'http://onliner.by',
-        defaultBukSelector : '.top-informer-currency ._u',
+        defaultBukUrl : 'http://select.by/kurs/',
+        defaultBukSelector : 'div.module-best_kurs table tbody tr:nth-child(3) td:nth-child(3)',
         defaultFilters : [ 
             { type: 'replace', cond : /\D/g, val :''}
             

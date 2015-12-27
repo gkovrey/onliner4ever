@@ -13,7 +13,15 @@ var onliner = {
         { selector : '.apartment-bar__value'},
         { selector : 'select option', filters : [
             { type: 'replace', cond: ' млн', val : '000000' }
-        ]}
+        ]},
+        { selector : '.schema-product__price a span'},
+        { selector : '.b-offers-desc__info-sub a', filters : [
+            { type: 'split'  , cond : /[^0-9a-zA-Z\s\$]/}
+        ] },
+        { selector : '.b-offers-desc__info-sub', filters : [
+            { type: 'split'  , cond : /[^0-9a-zA-Z\s\$]/}
+        ] },
+        { selector : '.product-aside__price--primary'},
     ],
     filters : []
 }

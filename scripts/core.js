@@ -59,9 +59,10 @@ BukCalc.prototype.getBuk = function() {
     var self = this;
     if (this.options.bukSelector.length < 1) {
         $.ajax({
-            url: this.options.defaultBukUrl,
+            url: 'http://cors-anywhere.herokuapp.com/' + this.options.defaultBukUrl,
             type: 'GET',
             cache:false,
+            crossDomain: true,
             success: function (data) {;
                 self.buk = parseInt(self.trimPrice(
                     $(data).find(self.options.defaultBukSelector).text()
@@ -158,6 +159,10 @@ Factory.prototype.getConfig = function (URL) {
         config = redmoose;
     } else if (URL.match('.*av.*')) {
         config = av;
+    } else if (URL.match('.*dominant.*')) {
+        config = dominant;
+    } else if (URL.match('.*ridershop.*')) {
+        config = rider;
     }
     return config;
 };

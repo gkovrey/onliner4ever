@@ -1,7 +1,7 @@
  {
   "manifest_version": 2,
   "name": "onlinerЖиви",
-  "version": "1.5.28",
+  "version": "1.6.28",
   "content_scripts": [
     {
         "matches": [ 
@@ -10,7 +10,9 @@
             "*://*.1k.by/*",
             "*://*.cheapmunk.by/*",
             "*://*.redmoose.by/*",
-            "*://*.av.by/*"
+            "*://*.av.by/*",
+            "*://*.dominant.by/*",
+            "*://*.ridershop.by/*"
         ],
         "js": [ 
                 "jquery.min.js",
@@ -21,7 +23,12 @@
                 "scripts/cheapmunk.js",
                 "scripts/redmoose.js",
                 "scripts/av.js",
+                "scripts/dominant.js",
+                "scripts/rider.js",
                 "app.js"
+        ],
+        "css": [
+                "css/scripts.css"
         ]
     }
   ],

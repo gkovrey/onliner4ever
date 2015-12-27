@@ -1,0 +1,4 @@
+.product-aside__price--primary .act-price,
+.schema-product__price .act-price {
+	display: block;
+}
